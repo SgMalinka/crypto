@@ -1,0 +1,63 @@
+@use '@/styles/mixins' as *;
+
+.crypto {
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    cursor: pointer;
+    @include d-flex(null, null, center);
+
+    &__logo {
+        flex-shrink: 0;
+    }
+
+    &__name {
+        flex: 1 1 150px;
+        min-width: 100px;
+    }
+
+    &__price {
+        flex: 0 0 100px;
+        text-align: right;
+    }
+
+    &__cap {
+        flex: 0 0 80px;
+        text-align: right;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 440px) {
+    .crypto {
+        padding: 10px 5px;
+        width: auto;
+        max-width: 324px;
+        &__name {
+            flex: 1 1 150px;
+            min-width: 70px;
+        }
+
+        &__price {
+            flex: 0 0 70px;
+            text-align: right;
+        }
+
+        &__cap {
+            flex: 0 0 80px;
+            text-align: right;
+        }
+    }
+}

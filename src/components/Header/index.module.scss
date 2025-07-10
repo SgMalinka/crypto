@@ -1,0 +1,17 @@
+@use '@/styles/mixins' as *;
+
+.navbar {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    @include d-flex(null, center, center);
+    gap: 10px;
+
+    &__ul {
+        @include d-flex(null, null, center);
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+}

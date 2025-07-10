@@ -38,6 +38,7 @@ export default [
                 expect: true,
                 describe: true,
                 beforeEach: true,
+                HeadersInit: true,
             },
         },
         plugins: {

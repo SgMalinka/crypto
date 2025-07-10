@@ -1,0 +1,149 @@
+@use '@/styles/mixins' as *;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include d-flex(null, center, center);
+    z-index: 999;
+    padding: 10px;
+
+    &__backdrop {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        max-width: 800px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__header {
+        @include d-flex(null, right, center);
+    }
+
+    &__text {
+        font-weight: 600;
+        margin-left: 5px;
+    }
+
+    &__favorite {
+        background: none;
+        border: none;
+        cursor: pointer;
+        gap: 10px;
+        @include d-flex(null, null, center);
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 5px;
+    }
+
+    &__infoItem {
+        background: #f9f9f9;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+
+        span {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        padding: 5px;
+
+        &__backdrop {
+            padding: 15px;
+            max-width: 95vw;
+            border-radius: 8px;
+        }
+
+        &__info {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        &__infoItem {
+            font-size: 13px;
+            padding: 8px 12px;
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .modal {
+        padding: 10px;
+
+        &__backdrop {
+            max-width: 600px;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        &__info {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        &__infoItem {
+            font-size: 14px;
+            padding: 9px 13px;
+        }
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .modal {
+        padding: 15px;
+
+        &__backdrop {
+            max-width: 550px;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        &__info {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        &__infoItem {
+            font-size: 15px;
+            padding: 10px 14px;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .modal {
+        padding: 10px;
+
+        &__backdrop {
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        &__info {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        &__infoItem {
+            font-size: 14px;
+            padding: 10px 14px;
+        }
+    }
+}
