@@ -47,7 +47,7 @@ export const ModalWindow: React.FC<ModalWindowProps> = ({ coin, onClose }) => {
                 <CryptoChart prices={chartData?.prices ?? []} />
                 <button onClick={toggleFavorite} className={s.modal__favorite}>
                     <p className={s.modal__text}>
-                        {favorite ? 'Remove from favorite' : 'Add to favorite'}
+                        {favorite ? 'Remove from favorites' : 'Add to favorites'}
                     </p>
                     <Image
                         src={favorite ? '/heart.png' : '/default-heart.png'}
